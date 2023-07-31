@@ -3,11 +3,13 @@ import random
 def studentGennerate():
     student = 1000
     for i in range(student):
-        print('Student : ',i+1)
+        rangrade = graderandom()
+        print('Student:',i+1,'grade is :',rangrade)
 
 def graderandom():
     grade = random.randint(0,100)
-    print(grade)
+    return grade
+    #print(grade)
 
 def chackgrade():
     g = int()
@@ -24,4 +26,4 @@ def chackgrade():
 
 def gradepercent():
     print("")        
-    
+
