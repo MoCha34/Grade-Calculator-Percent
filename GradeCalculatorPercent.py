@@ -1,14 +1,13 @@
 import random
 
-def studentGennerate():
-    student = 1000
+def studentGennerate(student): 
     A,B,C,D,F=0,0,0,0,0
     for i in range(student):
         rangrade = graderandom()
         gradetxt = chackgrade(int(rangrade))
         print('Student:',i+1,'point:',rangrade,'grade:',gradetxt)
         if gradetxt is "A":
-            A=A+1
+            A+=1
         elif gradetxt is "B":
             B+=1
         elif gradetxt is "C":
@@ -23,12 +22,12 @@ def studentGennerate():
     print("Percent D:","%.2f"%float((D/1000)*100))
     print("Percent F:","%.2f"%float((F/1000)*100))
     print("Total sum student :",A+B+C+D+F)
+
 def graderandom():
     grade = random.randint(0,100)
     return grade
 
-def chackgrade(g):
-      
+def chackgrade(g):   
     if g >= 80:
         return("A")
     elif g>= 70:
@@ -41,4 +40,4 @@ def chackgrade(g):
         return("F")              
 
 
-studentGennerate()
+studentGennerate(1000)
